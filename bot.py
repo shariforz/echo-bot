@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# This program is dedicated to the public domain under the CC0 license.
+
 """
 Simple Bot to reply to Telegram messages.
 First, a few handler functions are defined. Then, those functions are passed to
@@ -21,8 +25,6 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 PORT = int(os.environ.get('PORT', '8443'))
-TOKEN = 945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnj
-APP_NAME = telegramborbekorchi
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
 
@@ -53,7 +55,7 @@ def main():
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
     updater = Updater(
-        TOKEN, use_context=True)
+        '945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnjk', use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -71,9 +73,9 @@ def main():
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0",
                           port=PORT,
-                          url_path=TOKEN)
+                          url_path='945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnjk')
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook(APP_NAME + TOKEN)
+    updater.bot.set_webhook('https://telegramborbekorchi.herokuapp.com/' + '945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnjk')
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
