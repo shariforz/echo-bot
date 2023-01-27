@@ -75,7 +75,7 @@ def main():
                           port=PORT,
                           url_path='945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnjk')
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook('https://telegramborbekorchi.herokuapp.com/' + '945521760:AAHKfX-sra-m_F70Sv_ksuW1NOq_Cydgnjk')
+    updater.bot.set_webhook('https://telegramborbekorchi.herokuapp.com/' + 'token')
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
